@@ -1,4 +1,4 @@
-site_name: My Docs
+site_name: Docs
 site_url: https://sitename.example
 theme:
   name: material
@@ -78,25 +78,10 @@ markdown_extensions:
 #      link: https://youtube.com/@content_creator_channel_url
 #    - icon: simple/linkedin
 #      link: https://linkedin.com/in/content_creator
-copyright: Copyright &copy; 2024 Content Creator Name
-#nav:
-#  - 'Home': 'index.md'
-#  - tutorials.md
-#  - 'How-To Guides': 'how-to-guides.md'
-#Or
-#nav:
-#  - Home: index.md
-#  - tutorials.md
-#  - How-To Guides: how-to-guides.md
-#And
-#nav:
-#  - Home: index.md
-#  - Pages:
-#    - Page1: path-to-page1
-#    - Page2: path-to-page2
+copyright: Copyright &copy; 2026 Name
+
 nav:
   #- index.md
   - Home: index.md
   - Machine Learning:
-      - ML/introML.md
-      - 10. References: RAG/10_references.md
+      - Introduction: ML/introML.md
