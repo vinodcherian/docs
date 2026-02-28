@@ -1,9 +1,9 @@
 ### This workflow uses [astral-sh/setup-uv](https://github.com) to automate deployment to GitHub Pages.
-
 name: Deploy MkDocs
 on:
-  push:
-    branches: [main]
+#  push:
+#    branches: [main]
+  workflow_dispatch: # This enables the manual trigger
 
 permissions:
   contents: write
