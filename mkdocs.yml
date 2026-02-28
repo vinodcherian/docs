@@ -97,18 +97,6 @@ copyright: Copyright &copy; 2024 Content Creator Name
 nav:
   #- index.md
   - Home: index.md
-  - CNN:
-      - CNN/cnn.md
-  - RAG:
-      - RAG/rag_presentation.md
-      - RAG/rag.md
-      - 1. What is RAG: RAG/01_what-is-rag.md
-      - 2. History of RAG: RAG/02_history.md
-      - 3. RAG Architecture: RAG/03_architecture.md
-      - 4. Types of RAG: RAG/04_types.md
-      - 5. Tools and Frameworks: RAG/05_tools.md
-      - 6. Advanced RAG Variants: RAG/06_advanced.md
-      - 7. Recent Developments: RAG/07_developments.md
-      - 8. Future Directions: RAG/08_future.md
-      - 9. Summary: RAG/09_summary.md
+  - Machine Learning:
+      - ML/introML.md
       - 10. References: RAG/10_references.md
