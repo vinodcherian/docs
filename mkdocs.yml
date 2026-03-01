@@ -85,3 +85,5 @@ nav:
   - Home: index.md
   - Machine Learning:
       - Introduction: ML/introML.md
+      - Types of ML: ML/types_of_ML.md
+      - Evaluation of ML Models: ML/evaluation.md
