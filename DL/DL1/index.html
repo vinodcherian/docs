@@ -1,0 +1,787 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://sitename.example/DL/DL1/">
+      
+      
+        <link rel="prev" href="../../ML/model_comparision/">
+      
+      
+        <link rel="next" href="../DL2/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Introduction1 - Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#from-deep-learning-mindmapbrief-doc" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M19.7 34.5c16.3-6.8 35 .9 41.8 17.2L192 364.8 322.5 51.7c6.8-16.3 25.5-24 41.8-17.2s24 25.5 17.2 41.8l-160 384c-5 11.9-16.6 19.7-29.5 19.7s-24.6-7.8-29.5-19.7l-160-384c-6.8-16.3.9-35 17.2-41.8"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introduction1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Light Mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Light Mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="deep-orange"  aria-label="Dark Mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Dark Mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Docs" class="md-nav__button md-logo" aria-label="Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M19.7 34.5c16.3-6.8 35 .9 41.8 17.2L192 364.8 322.5 51.7c6.8-16.3 25.5-24 41.8-17.2s24 25.5 17.2 41.8l-160 384c-5 11.9-16.6 19.7-29.5 19.7s-24.6-7.8-29.5-19.7l-160-384c-6.8-16.3.9-35 17.2-41.8"/></svg>
+
+    </a>
+    Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Machine Learning
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Machine Learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ML/introML/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ML/types_of_ML/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Types of ML
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ML/evaluation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Evaluation of ML Models
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ML/Data_Science/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Science
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ML/model_comparision/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ML Models Comparision
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Deep Learning
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Deep Learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction1
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DL2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="from-deep-learning-mindmapbrief-doc">From Deep Learning MindMap[brief doc]<a class="headerlink" href="#from-deep-learning-mindmapbrief-doc" title="Permanent link">&para;</a></h1>
+<h1 id="deep-learning-briefing-document">Deep Learning Briefing Document<a class="headerlink" href="#deep-learning-briefing-document" title="Permanent link">&para;</a></h1>
+<h2 id="i-introduction-to-deep-learning-concepts">I. Introduction to Deep Learning Concepts<a class="headerlink" href="#i-introduction-to-deep-learning-concepts" title="Permanent link">&para;</a></h2>
+<p>Deep Learning is a subset of machine learning that employs artificial neural networks with multiple layers to learn representations of data with multiple levels of abstraction. This briefing outlines key concepts, components, and methodologies within deep learning, drawing from the provided "Deep Learning mindmap.pdf" source.</p>
+<h2 id="ii-core-components-of-a-neural-network">II. Core Components of a Neural Network<a class="headerlink" href="#ii-core-components-of-a-neural-network" title="Permanent link">&para;</a></h2>
+<h3 id="a-layers">A. Layers<a class="headerlink" href="#a-layers" title="Permanent link">&para;</a></h3>
+<p>Neural networks are structured in layers, which are the fundamental building blocks.</p>
+<ul>
+<li><strong>Input Layer:</strong> "Comprised of multiple Real-Valued inputs. Each input must be linearly independent from each other." This layer receives the initial data.</li>
+<li><strong>Hidden Layers:</strong> These are "Layers other than the input and output layers." A layer "usually receives weighted input, transforms it with a set of mostly non-linear functions and then passes these values as output to the next layer." The presence of multiple hidden layers is what defines "deep" learning.</li>
+<li><strong>Output Layer:</strong> This layer produces the final output of the network, based on the transformations performed by the preceding layers.</li>
+</ul>
+<h3 id="b-weight-initialization">B. Weight Initialization<a class="headerlink" href="#b-weight-initialization" title="Permanent link">&para;</a></h3>
+<p>Proper initialization of weights is crucial for effective training.</p>
+<ul>
+<li><strong>All Zero Initialization:</strong> This is a "mistake" because "if every neuron in the network computes the same output, then they will also all compute the same gradients during back-propagation and undergo the exact same parameter updates." This leads to a lack of asymmetry and prevents neurons from learning distinct features.</li>
+<li><strong>Initialization with Small Random Numbers:</strong> This is the preferred method, as it ensures "neurons are all random and unique in the beginning, so they will compute distinct updates and integrate themselves as diverse parts of the full network." Values are typically drawn from a normal distribution with zero mean and small standard deviation.</li>
+<li><strong>Calibrating the Variances:</strong> To ensure consistent output distribution across neurons and improve convergence, "you can normalize the variance of each neuron's output to 1 by scaling its weight vector by the square root of its fan-in (i.e., its number of inputs)."</li>
+</ul>
+<h3 id="c-activation-functions">C. Activation Functions<a class="headerlink" href="#c-activation-functions" title="Permanent link">&para;</a></h3>
+<p>An activation function "Defines the output of that node given an input or set of inputs." They introduce non-linearity into the network, enabling it to learn complex patterns. Common types include:</p>
+<ul>
+<li>ReLU (Rectified Linear Unit)</li>
+<li>Sigmoid / Logistic</li>
+<li>Tanh</li>
+<li>Softmax</li>
+<li>Leaky ReLU, PReLU, RReLU, ELU, SELU, and others.</li>
+</ul>
+<h2 id="iii-training-and-optimization">III. Training and Optimization<a class="headerlink" href="#iii-training-and-optimization" title="Permanent link">&para;</a></h2>
+<h3 id="a-costloss-functions">A. Cost/Loss Functions<a class="headerlink" href="#a-costloss-functions" title="Permanent link">&para;</a></h3>
+<p>Cost or Loss functions quantify the error of a model's predictions compared to the true values. The goal of training is to minimize this function.</p>
+<ul>
+<li><strong>Maximum Likelihood Estimation (MLE):</strong> Many cost functions, such as Least Squares and Cross-Entropy, are derived from MLE. It selects "the set of values of the model parameters that maximizes the likelihood function," intuitively maximizing "the 'agreement' of the selected model with the observed data." The natural logarithm of the likelihood function (log-likelihood) is often used for convenience due to its monotonic increasing nature.</li>
+<li><strong>Cross-Entropy:</strong> Used to define the loss function, where "The true probability pi is the true label, and the given distribution qi is the predicted value of the current model." It's particularly common in classification tasks.</li>
+<li><strong>Quadratic Loss:</strong> "Common, for example when using least squares techniques." It is "more mathematically tractable than other loss functions" and is symmetric, meaning errors of the same magnitude above or below the target result in the same loss.</li>
+<li><strong>0-1 Loss:</strong> A simple function that assigns 0 if the prediction is correct and 1 if it's incorrect.</li>
+<li><strong>Hinge Loss:</strong> Used for training classifiers, particularly for Support Vector Machines.</li>
+<li><strong>Exponential Loss:</strong> Another function used in classification.</li>
+<li><strong>Hellinger Distance:</strong> Quantifies the similarity between two probability distributions.</li>
+<li><strong>Kullback-Leibler Divergence:</strong> Measures "how one probability distribution diverges from a second expected probability distribution." It's used for information gain and characterizing entropy.</li>
+</ul>
+<h3 id="b-optimization-algorithms">B. Optimization Algorithms<a class="headerlink" href="#b-optimization-algorithms" title="Permanent link">&para;</a></h3>
+<p>Optimization algorithms adjust the model's parameters to minimize the loss function.</p>
+<ul>
+<li><strong>Gradient Descent:</strong> A "first-order iterative optimization algorithm for finding the minimum of a function." It involves taking "steps proportional to the negative of the gradient."</li>
+<li><strong>Stochastic Gradient Descent (SGD):</strong> While standard Gradient Descent uses the "total gradient over all examples per update," SGD "updates after only 1 or few examples." "Ordinary gradient descent as a batch method is very slow, should never be used."</li>
+<li><strong>Mini-batch Stochastic Gradient Descent (SGD):</strong> The "most commonly used now," it updates using a "mini-batch x1...m of size m" of examples, typically between 20 and 1000. This balances the estimation quality of the gradient with computational efficiency due to parallelism.</li>
+<li><strong>Momentum:</strong> Improves SGD by "Add[ing] a fraction v of previous update to current one." This "will increase the size of the steps taken towards the minimum" when the gradient consistently points in the same direction.</li>
+<li><strong>Adagrad:</strong> Provides "Adaptive learning rates for each parameter!" This means "learning rate is adapting differently for each parameter and rare parameters get larger updates than frequently occurring parameters."</li>
+<li><strong>Learning Rate:</strong> A crucial hyperparameter that dictates the step size taken during gradient descent. If too high, weights "will change far too much each iteration, which will make them 'overcorrect' and the loss will actually increase/diverge." Common strategies include keeping it fixed, reducing it by 0.5 when validation error stops improving, or using adaptive methods like AdaGrad.</li>
+</ul>
+<h3 id="c-backpropagation">C. Backpropagation<a class="headerlink" href="#c-backpropagation" title="Permanent link">&para;</a></h3>
+<p>"Is a method used in artificial neural networks to calculate the error contribution of each neuron after a batch of data. It calculates the gradient of the loss function." It's essential for gradient-based optimization algorithms. The error is "calculated at the output and distributed back through the network layers," which is why it's also called "backward propagation of errors." This method is efficient because it "reuse[s] partial derivatives computed for higher layers in lower layers."</p>
+<h3 id="d-regularization">D. Regularization<a class="headerlink" href="#d-regularization" title="Permanent link">&para;</a></h3>
+<p>Techniques to prevent overfitting, where the model performs well on training data but poorly on unseen data.</p>
+<ul>
+<li><strong>L1 Norm (Manhattan Distance):</strong> Also known as Least Absolute Deviations (LAD), it minimizes "the sum of the absolute differences (S) between the target value and the estimated values." It can lead to sparse models.</li>
+<li><strong>L2 Norm (Euclidean Distance):</strong> Also known as Least Squares, it minimizes "the sum of the square of the differences (S) between the target value and the estimated values."</li>
+<li><strong>Early Stopping:</strong> Provides "guidance as to how many iterations can be run before the learner begins to over-fit, and stop the algorithm then." Using "parameters that gave best validation error."</li>
+<li><strong>Dropout:</strong> A "regularization technique for reducing overfitting in neural networks by preventing complex co-adaptations on training data." During training, "randomly set 50% of the inputs to each neuron to 0." At test time, "halve the model weights." This acts as a form of model averaging.</li>
+<li><strong>Sparse Regularizer on Columns:</strong> Combines L2 norm on each column with an L1 norm over all columns.</li>
+<li><strong>Nuclear Norm Regularization:</strong> Not detailed, but listed as a type.</li>
+<li><strong>Mean-Constrained Regularization:</strong> "Constrains the functions learned for each task to be similar to the overall average of the functions across all tasks," useful when tasks are expected to share similarities.</li>
+</ul>
+<h2 id="iv-neural-network-architectures">IV. Neural Network Architectures<a class="headerlink" href="#iv-neural-network-architectures" title="Permanent link">&para;</a></h2>
+<h3 id="a-feed-forward-neural-networks">A. Feed-Forward Neural Networks<a class="headerlink" href="#a-feed-forward-neural-networks" title="Permanent link">&para;</a></h3>
+<p>In these networks, "connections between the units do not form a cycle." Information moves "only in one direction, forward, from the input nodes, through the hidden nodes (if any) and to the output nodes."</p>
+<ul>
+<li><strong>Single-Layer Perceptron:</strong> Inputs are directly connected to outputs via weights. With a logistic activation function, it becomes a logistic regression model.</li>
+<li><strong>Multi-Layer Perceptron:</strong> Consists of "multiple layers of computational units, usually interconnected in a feed-forward way." Each neuron in one layer connects to neurons in the subsequent layer, often using a sigmoid activation function.</li>
+</ul>
+<h3 id="b-recurrent-neural-networks-rnns">B. Recurrent Neural Networks (RNNs)<a class="headerlink" href="#b-recurrent-neural-networks-rnns" title="Permanent link">&para;</a></h3>
+<p>"A class of artificial neural network where connections between units form a directed cycle." This allows them to "exhibit dynamic temporal behavior" and "use their internal memory to process arbitrary sequences of inputs," making them suitable for tasks like handwriting or speech recognition.</p>
+<ul>
+<li><strong>Long Short-Term Memory (LSTMs):</strong> A specific type of RNN that allows data to flow both forwards and backwards, making it "well-suited to learn from experience to classify, process and predict time series given time lags of unknown size." LSTMs are relatively insensitive to gap length, offering an advantage over other sequence learning methods.</li>
+</ul>
+<h3 id="c-recursive-neural-networks-rnns">C. Recursive Neural Networks (RNNs)<a class="headerlink" href="#c-recursive-neural-networks-rnns" title="Permanent link">&para;</a></h3>
+<p>"A kind of deep neural network created by applying the same set of weights recursively over a structure, to produce a structured prediction over variable-size input structures." They have been successful in natural language processing for learning sequence and tree structures, particularly continuous representations of phrases and sentences based on word embeddings.</p>
+<h3 id="d-convolutional-neural-networks-cnns">D. Convolutional Neural Networks (CNNs)<a class="headerlink" href="#d-convolutional-neural-networks-cnns" title="Permanent link">&para;</a></h3>
+<p>Primarily used for tasks involving grid-like data, such as images. They have applications in "image and video recognition, recommender systems and natural language processing." Key components include:</p>
+<ul>
+<li><strong>Convolution:</strong> Applying filters to input data to extract features.</li>
+<li><strong>Pooling/Subsampling:</strong> Reducing the spatial dimensions of the feature maps, helping to make the representation more robust to small shifts and distortions.</li>
+</ul>
+<h3 id="e-auto-encoders">E. Auto-Encoders<a class="headerlink" href="#e-auto-encoders" title="Permanent link">&para;</a></h3>
+<p>"An artificial neural network used for unsupervised learning of efficient codings." Their aim is "to learn a representation (encoding) for a set of data, typically for the purpose of dimensionality reduction." They are increasingly used for learning generative models.</p>
+<h3 id="f-generative-adversarial-networks-gans">F. Generative Adversarial Networks (GANs)<a class="headerlink" href="#f-generative-adversarial-networks-gans" title="Permanent link">&para;</a></h3>
+<p>"A class of artificial intelligence algorithms used in unsupervised machine learning, implemented by a system of two neural networks contesting with each other in a zero-sum game framework." One network (the generator) creates new data, and the other (the discriminator) tries to distinguish between real and generated data.</p>
+<h2 id="v-practical-deep-learning-strategy--tools">V. Practical Deep Learning Strategy &amp; Tools<a class="headerlink" href="#v-practical-deep-learning-strategy--tools" title="Permanent link">&para;</a></h2>
+<h3 id="a-gradient-checks">A. Gradient Checks<a class="headerlink" href="#a-gradient-checks" title="Permanent link">&para;</a></h3>
+<p>An essential step for debugging neural network implementations.</p>
+<ol>
+<li><strong>Implement your gradient.</strong></li>
+<li><strong>Implement a finite difference computation</strong> by adding and subtracting a small epsilon to parameters and estimating derivatives.</li>
+<li><strong>Compare the two</strong> to ensure they are "almost the same." If gradient checks fail, simplify the model until the bug is identified.</li>
+</ol>
+<h3 id="b-model-power-and-regularization">B. Model Power and Regularization<a class="headerlink" href="#b-model-power-and-regularization" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Check if the model is powerful enough to overfit:</strong> If not, "change model structure or make model 'larger'" by increasing units or layers.</li>
+<li><strong>If you can overfit:</strong> "Regularize to prevent overfitting." Initial steps include "Reduce model size by lowering number of units and layers" or applying "Standard L1 or L2 regularization on weights."</li>
+</ul>
+<h3 id="c-tensorflow">C. TensorFlow<a class="headerlink" href="#c-tensorflow" title="Permanent link">&para;</a></h3>
+<p>TensorFlow is a prominent open-source machine learning framework developed by Google. It provides primitives for defining functions on tensors and automatically computing their derivatives, expressed as a graph.</p>
+<ul>
+<li><strong>Intuition:</strong> The "Tensorflow Graph is build to contain all placeholders for X and y, all variables for W’s and b’s, all mathematical operations, the cost function, and the optimisation procedure." At runtime, data batches are "fed into that Graph, by placing the data batches in the placeholders and running the Graph." This graph-based approach enables parallelization across networks.</li>
+<li><strong>Main Components:Variables:</strong> "Stateful nodes that output their current value, their state is retained across multiple executions of the graph." These are typically parameters like Weights (W) and Biases (b).</li>
+<li><strong>Placeholders:</strong> "Nodes whose value is fed at execution time," typically for inputs (features X and labels y).</li>
+<li><strong>Mathematical Operations:</strong> Functions like MatMul, Add, ReLU.</li>
+<li><strong>Graph Nodes:</strong> Operations with inputs and outputs.</li>
+<li><strong>Edges:</strong> Tensors that flow between nodes.</li>
+<li><strong>Session:</strong> "A binding to a particular execution context: CPU, GPU." It's used to execute operations in the graph.</li>
+<li><strong>Phases:Construction:</strong> Assembling the computational graph (no numerical values yet).</li>
+<li><strong>Execution:</strong> Using a Session object to evaluate tensors and run operations.</li>
+<li><strong>tf.estimator:</strong> TensorFlow's high-level API that simplifies building, training, and evaluating various ML models, including LinearClassifier, LinearRegressor, DNNClassifier, and DNNRegressor.</li>
+<li><strong>Main Steps for tf.estimator:Define Feature Columns:</strong> Encoding features for Estimators (e.g., real_valued_column for continuous, sparse_column_with_* for categorical).</li>
+<li><strong>Define your Layers, or use a prebuilt model.</strong></li>
+<li><strong>Write the input_fn function:</strong> Holds features and labels.</li>
+<li><strong>Train the model</strong> using the fit function.</li>
+<li><strong>Predict and Evaluate</strong> using eval_input_fn.</li>
+<li><strong>TensorBoard:</strong> "TensorFlow has some neat built-in visualization tools (TensorBoard)" for monitoring and visualizing training processes.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../ML/model_comparision/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ML Models Comparision">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                ML Models Comparision
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../DL2/" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction2">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Introduction2
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Name
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.sections", "navigation.path", "header.autohide", "navigation.footer", "navigation.top", "toc.follow", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../javascripts/shortcuts.js"></script>
+      
+    
+  </body>
+</html>
