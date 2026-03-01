@@ -87,3 +87,8 @@ nav:
       - Introduction: ML/introML.md
       - Types of ML: ML/types_of_ML.md
       - Evaluation of ML Models: ML/evaluation.md
+      - Data Science: ML/Data_Science.md
+      - ML Models Comparision: ML/model_comparision.md      
+  - Deep Learning:
+      - Introduction1: DL/DL1.md
+      - Introduction2: DL/DL2.md      
